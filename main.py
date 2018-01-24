@@ -24,11 +24,17 @@ form = """<!DOCTYPE html>
         </style>
     </head>
     <body>
-      This is my custom form
+        <form action="" method="POST">
+            <label>Rotate By:
+            <input type="text" name="rot" value="0"></label><br><br>
+            <label>Words to Rotate</label>
+            <textarea name="text"></textarea><br>
+            <input type="submit" />
+        </form>
     </body>
 </html>"""
-@app.route("/")
+@app.route("/",  methods=['POST'])
 def index():
-    return "Hello World"
+    return form
 
 app.run()
