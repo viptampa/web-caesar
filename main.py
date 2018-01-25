@@ -38,8 +38,11 @@ form = """<!DOCTYPE html>
 def index():
     return form
 @app.route("/",  methods=['POST'])
-def encrypt(text, rot):
-    return "test"
+def encrypt():
+    text = str(text)
+    rot = int(rot)
+    encryptedtext = rotate_string(text, rot)
+    return '''<h1>encryptedtext</h1>'''
 
 
 app.run(host='0.0.0.0')
