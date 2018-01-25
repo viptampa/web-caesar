@@ -36,11 +36,8 @@ form = """<!DOCTYPE html>
 </html>"""
 @app.route("/")
 def index():
-    return "Hello World"
-
-@app.route("/",  methods=['POST'])
-def index():
     return form
+@app.route("/",  methods=['POST'])
 def encrypt(rotation_num, rotate_string):
     return "test"
 
