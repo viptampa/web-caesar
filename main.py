@@ -36,7 +36,7 @@ form = """<!DOCTYPE html>
 </html>"""
 @app.route("/")
 def index():
-    return form.format()
+    return form.format("")
 @app.route("/",  methods=['POST'])
 def encrypt():
     oldtext = str(request.form['text'])
