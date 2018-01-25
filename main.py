@@ -34,6 +34,10 @@ form = """<!DOCTYPE html>
         </form>
     </body>
 </html>"""
+@app.route("/")
+def index():
+    return "Hello World"
+
 @app.route("/",  methods=['POST'])
 def index():
     return form
@@ -41,4 +45,4 @@ def encrypt(rotation_num, rotate_string):
     return """<h1></h1>"""
 
 
-app.run()
+app.run(host=0.0.0.0)
