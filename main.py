@@ -45,4 +45,4 @@ def encrypt(rotation_num, rotate_string):
     return """<h1></h1>"""
 
 
-app.run(host=0.0.0.0)
+app.run(host='0.0.0.0')
