@@ -38,7 +38,7 @@ form = """<!DOCTYPE html>
 def index():
     return form
 @app.route("/",  methods=['POST'])
-def encrypt(rotate_string, rotation_num):
+def encrypt(text, rot):
     return "test"
 
 
